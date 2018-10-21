@@ -1,18 +1,9 @@
-#map {
-    height: 100%;
-    width: 100%;
-}
+#map {}
 
 
 /* Optional: Makes the sample page fill the window. */
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 agm-map {
-    height: 600px;
+    height: 640px;
+    width: 100%;
 }

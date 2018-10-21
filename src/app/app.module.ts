@@ -5,7 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routes';
 
+import { MaterialModule } from './app.material';
+
+/**                    AngularMaps                    */
 import { AgmCoreModule } from '@agm/core';
+
 /**                   AngularFire2                    */
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -15,17 +19,22 @@ import { environment } from '../environments/enviroment_firebase';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { SlidenavComponent } from './components/shared/slidenav/slidenav.component';
+import { SlideinfoComponent } from './components/shared/slideinfo/slideinfo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SlidenavComponent,
+    SlideinfoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MaterialModule,
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireAuthModule, 
