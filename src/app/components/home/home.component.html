@@ -1,6 +1,6 @@
 <agm-map [latitude]="latitud" [longitude]="longitud" [zoom]="15" (mapClick)="localizacion($event)">
 
-    <agm-marker *ngFor="let parking of _firebasedb.pestaciona" [latitude]="parking.latitud" [longitude]="parking.longitud">
+    <agm-marker *ngFor="let parking of _firebasedb.pestacionamientos" [latitude]="parking.latitud" [longitude]="parking.longitud">
 
         <agm-info-window>
 
@@ -14,4 +14,11 @@
 
     </agm-marker>
 
+
+
 </agm-map>
+
+
+<button type="button" class="btn btn-outline-info" (click)="ingresar()">Facebok</button>
+
+<button type="button" class="btn btn-outline-danger" (click)="cerrarSesion()">Cerrar Sesión</button>

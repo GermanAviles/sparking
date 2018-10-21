@@ -12,13 +12,10 @@ export class FirebasedbService {
 
   private itemsCollection: AngularFirestoreCollection<any>;
 
-  public pestaciona: Estacionamiento[] = [];
+  public pestacionamientos: Estacionamiento[] = [];
 
   constructor( private afs: AngularFirestore ) {
 
-    
-    //console.log("desde el servicio constructor");
-    //this.cargarEstacionamientos();
   }
 
   cargarEstacionamientos(){
@@ -32,10 +29,12 @@ export class FirebasedbService {
 
                                   console.log(estacionamientos);
 
-                                  this.pestaciona = [];
-
+                                  this.pestacionamientos = [];
+                                  /** recorremos cada uno de los estacionamientos y los guardamos 
+                                   *  en la lista "pestacionamientos"
+                                   */
                                   estacionamientos.forEach(estacionamiento => {
-                                    this.pestaciona.push( estacionamiento );
+                                    this.pestacionamientos.push( estacionamiento );
                                   });
 
 
