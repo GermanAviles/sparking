@@ -23,11 +23,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this._authuser.getAuth().subscribe( (auth)=> {
+    /*this._authuser.getAuth().subscribe( (auth)=> {
       if( auth )
         console.log( "Usuario Autenticado: ", auth );
         //almacenar los datos del usuario en una variable y utilizar la info mientras esté autenticado
-    });
+    });*/
   }
 
   localizacion( evento ){
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   ingresar(){
-   this._authuser.login();
+   this._authuser.login('fb');
   }
 
   cerrarSesion(){

@@ -1,0 +1,121 @@
+/* alineamos el icono dentro de su div*/
+
+i {
+    align-self: center;
+    font-size: 17px;
+}
+
+
+/*  posición del contedor del input e iconos */
+
+.cont-menu-all {
+    /* transform: translate(15%, -100%); */
+    width: 30%;
+    position: fixed;
+    margin-left: 20px;
+    margin-top: -590px;
+}
+
+
+/*  input */
+
+input[type=text] {
+    width: 100%;
+    border: 1px solid #AAAAAA;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+
+/* cuando el input tenga el focus */
+
+input[type=text]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+
+/*  ------------------------------------
+            icono dentro del input
+    --------------------------------------- */
+
+
+/* distancia del texto del borde del input */
+
+.inputWithIcon input[type=text] {
+    padding-left: 45px;
+    padding-right: 50px;
+}
+
+.inputWithIcon {
+    position: relative;
+}
+
+
+/* Posicion y color del icono dentro del input*/
+
+.inputWithIcon i {
+    position: absolute;
+    width: 10%;
+    margin-left: 1px;
+    margin-top: 1px;
+    padding-top: 9.5px;
+    padding-bottom: 10px;
+    color: #272727;
+    transition: 0.3s;
+    border: .8px solid rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.inputWithIcon i.i-right {
+    position: absolute;
+    width: 10%;
+    margin-right: 0px;
+    margin-left: 89.5%;
+    margin-top: -47px;
+    padding-top: 9.5px;
+    padding-bottom: 10px;
+    color: #272727;
+    transition: 0.3s;
+    border: .8px solid rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+/*              Fondo del icono             */
+
+
+/*
+.inputWithIcon.inputWithIconBg i {
+    background-color: rgb(255, 255, 255);
+    color: rgb(31, 31, 31);
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    border-radius: 4px 0px 0px 4px;
+}*/
+
+
+/*                SlideNav                  */
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0px;
+}
+
+.example-events {
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+}

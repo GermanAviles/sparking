@@ -1,21 +1,25 @@
-<agm-map [latitude]="latitud" [longitude]="longitud" [zoom]="15" (mapClick)="localizacion($event)">
+<div class="cont-app">
 
-    <agm-marker *ngFor="let parking of _firebasedb.pestacionamientos" [latitude]="parking.latitud" [longitude]="parking.longitud">
+    <agm-map [latitude]="latitud" [longitude]="longitud" [zoom]="15" (mapClick)="localizacion($event)">
 
-        <agm-info-window>
+        <agm-marker *ngFor="let parking of _firebasedb.pestacionamientos" [latitude]="parking.latitud" [longitude]="parking.longitud">
 
-            <strong>{{ parking.nombre }}</strong>
-            <p>{{ parking.latitud }}, {{ parking.longitud }}</p>
-            <div>
-                <button class="btn btn-outline-primary">informacion</button>
-            </div>
+            <agm-info-window>
 
-        </agm-info-window>
+                <strong>{{ parking.nombre }}</strong>
+                <p>{{ parking.latitud }}, {{ parking.longitud }}</p>
+                <div>
+                    <button class="btn btn-outline-primary">informacion</button>
+                </div>
 
-    </agm-marker>
+            </agm-info-window>
 
+        </agm-marker>
 
+    </agm-map>
 
-</agm-map>
+    <app-slidenav></app-slidenav>
+
+</div>
 <!-- <button type="button" class="btn btn-outline-info" (click)="ingresar()">Facebok</button>
 <button type="button" class="btn btn-outline-danger" (click)="cerrarSesion()">Cerrar Sesión</button> -->

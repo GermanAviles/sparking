@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Estacionamiento } from '../interfaces/estacionamiento';
+import { Usuario } from '../interfaces/usuario';
 
 
 @Injectable({
@@ -11,23 +12,20 @@ import { Estacionamiento } from '../interfaces/estacionamiento';
 export class FirebasedbService {
 
   private itemsCollection: AngularFirestoreCollection<any>;
-
   public pestacionamientos: Estacionamiento[] = [];
 
   constructor( private afs: AngularFirestore ) {
 
   }
 
-  cargarEstacionamientos(){
-    
-    //console.log("desde Cargar Estacionamiento")
-    
+  cargarEstacionamientos(){    
+    //console.log("desde Cargar Estacionamiento");    
     this.itemsCollection = this.afs.collection<Estacionamiento>('estacionamientos');
 
     return this.itemsCollection.valueChanges()
                                .pipe( map ( (estacionamientos:Estacionamiento[])=> {
-
-                                  console.log(estacionamientos);
+                                  //console.error("ESTACIONAMIENTOS:")
+                                  //console.log(estacionamientos);
 
                                   this.pestacionamientos = [];
                                   /** recorremos cada uno de los estacionamientos y los guardamos 
@@ -41,4 +39,15 @@ export class FirebasedbService {
                                }) );
 
   }
+
+  addUser( usuario ){
+    
+    this.itemsCollection = this.afs.collection<Usuario>('usuarios');
+
+    if( usuario.uid ){
+    this.itemsCollection.doc( usuario.uid ).set( usuario );
+    }
+    
+  }
+
 }

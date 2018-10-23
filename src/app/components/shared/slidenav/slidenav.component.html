@@ -1,3 +1,15 @@
-<p>
-  slidenav works!
-</p>
+<form #form="ngForm" novalidate>
+
+    <div class="row cont-menu-all">
+        <div class="col-md-12">
+
+            <div class="form-group inputWithIcon inputWithIconBg">
+                <i class="fas fa-bars fa-fw cursor" (click)="login('fb')"></i>
+                <input type="text" class="form-control" id="input-search" placeholder="Buscar estacionamiento...">
+                <i class="fas fa-search fa-fw i-right cursor" (click)="logout()"></i>
+            </div>
+
+        </div>
+    </div>
+
+</form>

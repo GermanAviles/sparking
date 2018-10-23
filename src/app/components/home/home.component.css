@@ -1,9 +1,11 @@
-#map {}
+#map {
+    width: 100%;
+}
 
 
-/* Optional: Makes the sample page fill the window. */
+/* dimensiones  del mapa */
 
 agm-map {
-    height: 640px;
+    height: 639px;
     width: 100%;
 }

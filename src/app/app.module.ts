@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routes';
 
+/**              elementos de angular material        */
 import { MaterialModule } from './app.material';
 
 /**                    AngularMaps                    */
@@ -17,6 +18,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/enviroment_firebase';
 
+/**                    componentes                    */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SlidenavComponent } from './components/shared/slidenav/slidenav.component';
